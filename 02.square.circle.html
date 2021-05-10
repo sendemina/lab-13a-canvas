@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body onload="draw()">
+    <canvas id="sketch" width="300" height="300"></canvas>
+    <script>
+      function draw() {
+        var sketch = document.getElementById('sketch');
+        var context = sketch.getContext("2d");
+        context.fillStyle = "#ff0000"; // red color...
+        // context.fillRect(x, y, width, height);
+        context.fillRect(70, 70, 100, 100);
+
+        context.fillStyle = "#BCBF50"; // a new kinda olive green from adobe color website
+        context.beginPath();
+        context.arc(250, 120, 50, 0, 2 * Math.PI, true);
+        context.closePath();
+        context.fill();
+      }
+
+    </script>
+
+  </body>
+</html>
