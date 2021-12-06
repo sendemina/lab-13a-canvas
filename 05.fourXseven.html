@@ -6,7 +6,7 @@ https://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/12/canvas.html#16
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Five Squares in a Row</title>
+	<title>Four By Seven</title>
 </head>
 <body onload="draw()">
 	<!-- https://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/12/canvas.html#5.0
@@ -16,7 +16,7 @@ https://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/12/canvas.html#16
 			—note that there are better ways to do this, but we’ll go with this technique for now.
 	-->
 
-	<canvas id="sketch" width="300" height="300">
+	<canvas id="sketch" width="300" height="600">
 		<!-- https://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/12/canvas.html#6.0
 			Let’s add a place to draw!. Use a pair of opening and closing tags called canvas… with attributes, id, width, and height.
 			—id will be used later in order to reference this particular canvas
@@ -51,12 +51,20 @@ https://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/12/canvas.html#16
 				// https://color.adobe.com/create
 				// or: https://htmlcolorcodes.com/
 
-				for (i = 0; i <= 4; i++)
+				for (var c = 1; c <= 7; c++)
 				{
-			// RECTANGLE: https://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/12/canvas.html#12.0
-        		// context.fillRect(x, y, width, height);
-        	context.fillRect((i * 30), 20, 20, 20);
-					context.fillRect((i * 30), 50, 20, 20);
+					for (var r = 1; r <=4; r++)
+					{
+						context.beginPath();
+						context.arc((r * 50), (c * 50), 20, 0, 2 * Math.PI, true);
+						context.closePath();
+						context.fill();
+						// CIRCLE: https://entertainmenttechnology.github.io/Wilson-MTEC1003/labs/12/canvas.html#13.0
+							// context.beginPath();
+							// context.arc(x, y, radius, start angle, end angle, clockwise);
+							// context.closePath();
+							// context.fill();
+					}
 				}
 		}
 
