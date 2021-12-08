@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Three Circles</title>
+  </head>
+  <body onload="draw()">
+    <canvas id="sketch" width="500" height="500">
+    </canvas>
+    <script>
+      function draw()
+      {
+        var sketch = document.getElementById("sketch");
+        var context = sketch.getContext("2d");
+
+        context.fillStyle = "#AD604D";
+        context.beginPath();
+        context.arc(sketch.width / 2, sketch.height / 2, 100, 0, 2 * Math.PI, true);
+        context.closePath();
+        context.fill();
+
+        context.fillStyle = "#58C6DB";
+        context.beginPath();
+        context.arc(sketch.width / 2, sketch.height / 2, 75, 0, 2 * Math.PI, true);
+        context.closePath();
+        context.fill();
+
+        context.fillStyle = "#387A43";
+        context.beginPath();
+        context.arc(sketch.width / 2, sketch.height / 2, 50, 0, 2 * Math.PI, true);
+        context.closePath();
+        context.fill();
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,2 @@
+On my website, I will animate several circles of different colors and sizes bouncing from all four walls of the canvas.
+Maybe, a new circle will be added to the bouncing pit as a click event.

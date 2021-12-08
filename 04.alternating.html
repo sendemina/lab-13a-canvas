@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Alternating</title>
+  </head>
+  <body onload="draw()">
+    <canvas id="sketch" width="2000" height="500">
+    </canvas>
+    <script>
+      function draw()
+      {
+        var sketch = document.getElementById("sketch");
+        var context = sketch.getContext("2d");
+        var user_number = prompt("How many shapes would you like to see?");
+        var number = parseInt(user_number);
+
+        for (i = 1; i <= number; i++)
+        {
+          if (i % 2 == 1)
+          {
+            context.fillStyle = "#331F22";
+            context.beginPath();
+            context.arc((i * 125 + 50), 150, 50, 0, 2 * Math.PI, true);
+            context.closePath();
+            context.fill();
+          }
+          else if (i % 2 == 0)
+          {
+            context.fillStyle = "#C76776";
+            context.fillRect((i * 125), 100, 100, 100);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
